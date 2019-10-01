@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO App</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="todos-header">todos</h1>
+    <div class="todos-main-window">
+        <div class="todos-main-window_header">
+            <div class="todos-main-window_header_actions">
+                <div class="todos-main-window_header_select-all-jobs-action">
+                    <button class="select-all-jobs-button" aria-label="Select all jobs">
+                        <img src="images/icons/select-all.png" alt="Select all jobs">
+                    </button>
+                </div>
+                <div class="todos-main-window_header_add-new-job-action">
+                    <label hidden for="add-new-job_input-job" class="add-new-job_input-job-label">Input job to add</label>
+                    <input id="add-new-job_input-job" placeholder="What needs to be done?" type="text" name="job-name">
+                </div>
+            </div>
+        </div>
+
+        <div class="todos-main-window-main">
+            <div class="todos-main-window-main_todos-job-list" aria-label="Jobs list">
+                <ul>
+                    <li>
+                        <div class="todos-job-list_job-entry" data-done="false" data-job-id="0" aria-label="Job entry 1">
+                            <div class="todos-job-list_job-entry_job-name" aria-label="Job name">
+                                <span>HTML</span>
+                            </div>
+                            <div hidden class="todos-job-list_job-entry_remove-job-action">
+                                <button class="remove-job-button" aria-label="Remove job">
+                                    <img src="images/icons/close.png" alt="Remove Job">
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="todos-job-list_job-entry" data-done="true" data-job-id="1" aria-label="Job entry 2">
+                            <div class="todos-job-list_job-entry_job-name" aria-label="Job name">
+                                <span>CSS</span>
+                            </div>
+                            <div hidden class="todos-job-list_job-entry_remove-job-action">
+                                <button class="remove-job-button" aria-label="Remove job">
+                                    <img src="images/icons/close.png" alt="Remove Job">
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="todos-job-list_job-entry" data-done="false" data-job-id="2" aria-label="Job entry 3">
+                            <div class="todos-job-list_job-entry_job-name" aria-label="Job name">
+                                <span>JS</span>
+                            </div>
+                            <div hidden class="todos-job-list_job-entry_remove-job-action">
+                                <button class="remove-job-button" aria-label="Remove job">
+                                    <img src="images/icons/close.png" alt="Remove Job">
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="todos-job-list_job-entry" data-done="false" data-job-id="3" aria-label="Job entry 4">
+                            <div class="todos-job-list_job-entry_job-name" aria-label="Job name">
+                                <span>JS tools</span>
+                            </div>
+                            <div hidden class="todos-job-list_job-entry_remove-job-action">
+                                <button class="remove-job-button" aria-label="Remove job">
+                                    <img src="images/icons/close.png" alt="Remove Job">
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="todos-main-window-footer">
+            <div class="todos-main-window-footer_jobs-count" aria-label="Jobs to do left">
+                <span>3 items left</span>
+            </div>
+            <nav class="todos-main-window-footer_jobs-selector-list" aria-label="Jobs selector">
+                <div class="todos-main-window-footer_jobs-selector-list_selector" data-active="true">
+                    <span>All</span>
+                </div>
+                <div class="todos-main-window-footer_jobs-selector-list_selector" data-active="false">
+                    <span>Active</span>
+                </div>
+                <div class="todos-main-window-footer_jobs-selector-list_selector" data-active="false">
+                    <span>Completed</span>
+                </div>
+            </nav>
+            <div class="todos-main-window-footer-clear-completed-jobs-action">
+                <div class="todos-main-window-footer-clear-completed-jobs-action_button-wrapper">
+                    <button aria-label="Clear completed jobs" class="clear-completed-jobs-button">Clear completed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
