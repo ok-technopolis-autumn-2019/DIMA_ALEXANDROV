@@ -5,100 +5,98 @@
     <title>TODO App</title>
 </head>
 <body>
-<div class="container">
-    <h1 class="todos-header">todos</h1>
-    <div class="todos-main-window">
-        <div class="todos-main-window_header">
-            <div class="todos-main-window_header_actions">
-                <div class="todos-main-window_header_select-all-jobs-action">
-                    <button class="select-all-jobs-button" aria-label="Select all jobs">
-                        <img src="images/icons/select-all.png" alt="Select all jobs">
-                    </button>
-                </div>
-                <div class="todos-main-window_header_add-new-job-action">
-                    <label hidden for="add-new-job_input-job" class="add-new-job_input-job-label">Input job to add</label>
-                    <input id="add-new-job_input-job" placeholder="What needs to be done?" type="text" name="job-name">
-                </div>
-            </div>
-        </div>
+<div class="todo-app">
+    <header class="todo-app__header">
+        <h1 class="title">todos</h1>
+    </header>
 
-        <div class="todos-main-window-main">
-            <div class="todos-main-window-main_todos-job-list" aria-label="Jobs list">
-                <ul>
-                    <li>
-                        <div class="todos-job-list_job-entry" data-done="false" data-job-id="0" aria-label="Job entry 1">
-                            <div class="todos-job-list_job-entry_job-name" aria-label="Job name">
-                                <span>HTML</span>
-                            </div>
-                            <div hidden class="todos-job-list_job-entry_remove-job-action">
-                                <button class="remove-job-button" aria-label="Remove job">
-                                    <img src="images/icons/close.png" alt="Remove Job">
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="todos-job-list_job-entry" data-done="true" data-job-id="1" aria-label="Job entry 2">
-                            <div class="todos-job-list_job-entry_job-name" aria-label="Job name">
-                                <span>CSS</span>
-                            </div>
-                            <div hidden class="todos-job-list_job-entry_remove-job-action">
-                                <button class="remove-job-button" aria-label="Remove job">
-                                    <img src="images/icons/close.png" alt="Remove Job">
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="todos-job-list_job-entry" data-done="false" data-job-id="2" aria-label="Job entry 3">
-                            <div class="todos-job-list_job-entry_job-name" aria-label="Job name">
-                                <span>JS</span>
-                            </div>
-                            <div hidden class="todos-job-list_job-entry_remove-job-action">
-                                <button class="remove-job-button" aria-label="Remove job">
-                                    <img src="images/icons/close.png" alt="Remove Job">
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="todos-job-list_job-entry" data-done="false" data-job-id="3" aria-label="Job entry 4">
-                            <div class="todos-job-list_job-entry_job-name" aria-label="Job name">
-                                <span>JS tools</span>
-                            </div>
-                            <div hidden class="todos-job-list_job-entry_remove-job-action">
-                                <button class="remove-job-button" aria-label="Remove job">
-                                    <img src="images/icons/close.png" alt="Remove Job">
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+    <main class="todo-app__frame">
+        <section class="todo-app__main-controls main-controls">
+            <div class="main-controls__select-all">
+                <button class="main-controls__select-all-button" aria-label="Select all jobs">
+                    <img src="images/icons/select-all.png" alt="Select all jobs">
+                </button>
             </div>
-        </div>
+            <div class="main-controls__create-new">
+                <input id="main-controls__create-new-input" placeholder="What needs to be done?" type="text" autofocus="autofocus"
+                       aria-label="Input job to add">
+            </div>
+        </section>
 
-        <div class="todos-main-window-footer">
-            <div class="todos-main-window-footer_jobs-count" aria-label="Jobs to do left">
-                <span>3 items left</span>
+        <section class="todo-app__tasks tasks">
+            <ul class="tasks__task-list task-list">
+                <li class="task-list__task-item task-item">
+                    <div class="task-item__view">
+                        <input type="checkbox" class="task-item__status" aria-label="Active task: HTML">
+                        <span class="task-item__text">HTML</span>
+                        <button class="task-item__delete-button">Delete task</button>
+                    </div>
+                    <div class="task-item__edit" hidden="hidden">
+                        <input type="text" class="task-item__input" value="HTML" aria-label="Edit task: HTML">
+                    </div>
+                </li>
+                <li class="task-list__task-item task-item">
+                    <div class="task-item__view">
+                        <input type="checkbox" class="task-item__status" aria-label="Completed task: CSS">
+                        <span class="task-item__text">CSS</span>
+                        <button class="task-item__delete-button">Delete task</button>
+                    </div>
+                    <div class="task-item__edit" hidden="hidden">
+                        <input type="text" class="task-item__input" value="CSS" aria-label="Edit task: CSS">
+                    </div>
+                </li>
+                <li class="task-list__task-item task-item">
+                    <div class="task-item__view">
+                        <input type="checkbox" class="task-item__status" aria-label="Active task: JS">
+                        <span class="task-item__text">JS</span>
+                        <button class="task-item__delete-button">Delete task</button>
+                    </div>
+                    <div class="task-item__edit" hidden="hidden">
+                        <input type="text" class="task-item__input" value="JS" aria-label="Edit task: JS">
+                    </div>
+                </li>
+                <li class="task-list__task-item task-item">
+                    <div class="task-item__view">
+                        <input type="checkbox" class="task-item__status" aria-label="Active task: JS tools">
+                        <span class="task-item__text">JS tools</span>
+                        <button class="task-item__delete-button">Delete task</button>
+                    </div>
+                    <div class="task-item__edit" hidden="hidden">
+                        <input type="text" class="task-item__input" value="JS tools" aria-label="Edit task: JS tools">
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="todo-app__actions-bar actions-bar">
+            <div class="actions-bar-item">
+                <div class="task-counter">
+                    <span>3 items left</span>
+                </div>
             </div>
-            <nav class="todos-main-window-footer_jobs-selector-list" aria-label="Jobs selector">
-                <div class="todos-main-window-footer_jobs-selector-list_selector" data-active="true">
-                    <span>All</span>
-                </div>
-                <div class="todos-main-window-footer_jobs-selector-list_selector" data-active="false">
-                    <span>Active</span>
-                </div>
-                <div class="todos-main-window-footer_jobs-selector-list_selector" data-active="false">
-                    <span>Completed</span>
-                </div>
-            </nav>
-            <div class="todos-main-window-footer-clear-completed-jobs-action">
-                <div class="todos-main-window-footer-clear-completed-jobs-action_button-wrapper">
-                    <button aria-label="Clear completed jobs" class="clear-completed-jobs-button">Clear completed</button>
+            <div class="actions-bar-item">
+                <div class="task-filter" role="group" aria-label="Filter tasks by status">
+                    <label class="task-filter__item">
+                        <input type="radio" class="task-filter__input" name="filter" checked="checked" value="All"/>
+                        <span class="task-filter__text" aria-label="Select all tasks">All</span>
+                    </label>
+                    <label class="task-filter__item">
+                        <input type="radio" class="task-filter__input" name="filter" value="Active"/>
+                        <span class="task-filter__text" aria-label="Select active tasks">Active</span>
+                    </label>
+                    <label class="task-filter__item">
+                        <input type="radio" class="task-filter__input" name="filter" value="Completed"/>
+                        <span class="task-filter__text" aria-label="Select completed tasks">Completed</span>
+                    </label>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="actions-bar-item">
+                <div class="clear-completed">
+                    <button class="clear-completed-button" aria-label="Clear completed tasks">Clear completed</button>
+                </div>
+            </div>
+        </section>
+    </main>
 </div>
 </body>
 </html>
